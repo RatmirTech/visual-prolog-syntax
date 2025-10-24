@@ -3,7 +3,7 @@
   "displayName": "Visual Prolog Language Support",
   "description": "Language support for Visual Prolog 5.2",
   "version": "0.1.0",
-  "publisher": "RatmirTech",
+  "publisher": "ratmir-arizava",
   "engines": {
     "vscode": "^1.50.0"
   },
