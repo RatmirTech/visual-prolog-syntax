@@ -25,5 +25,13 @@
       "path": "./snippets/visual-prolog.json"
     }]
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RatmirTech/visual-prolog-syntax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RatmirTech/visual-prolog-syntax/issues"
+  },
+  "homepage": "https://github.com/RatmirTech/visual-prolog-syntax#readme"
 }
