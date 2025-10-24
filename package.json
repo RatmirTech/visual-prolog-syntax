@@ -1,0 +1,29 @@
+{
+  "name": "visual-prolog-language-support",
+  "displayName": "Visual Prolog Language Support",
+  "description": "Language support for Visual Prolog 5.2",
+  "version": "0.1.0",
+  "publisher": "RatmirTech",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [{
+      "id": "visual-prolog",
+      "aliases": ["Visual Prolog", "vprolog"],
+      "extensions": [".pro", ".cl", ".pack", ".ph"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "visual-prolog",
+      "scopeName": "source.visual-prolog",
+      "path": "./syntaxes/visual-prolog.tmLanguage.json"
+    }],
+    "snippets": [{
+      "language": "visual-prolog",
+      "path": "./snippets/visual-prolog.json"
+    }]
+  },
+  "license": "MIT"
+}

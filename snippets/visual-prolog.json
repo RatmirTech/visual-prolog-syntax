@@ -1,0 +1,225 @@
+{
+  "Domain Declaration": {
+    "prefix": "domain",
+    "body": [
+      "domains",
+      "    ${1:DomainName} = ${2:type}",
+      "$0"
+    ],
+    "description": "Declare a domain"
+  },
+  "Predicate Declaration": {
+    "prefix": "predicate",
+    "body": [
+      "predicates",
+      "    ${1:predicateName}(${2:arguments})",
+      "$0"
+    ],
+    "description": "Declare a predicate"
+  },
+  "Clause Definition": {
+    "prefix": "clause",
+    "body": [
+      "clauses",
+      "    ${1:predicateName}(${2:Args}) :-",
+      "        ${3:body}.",
+      "$0"
+    ],
+    "description": "Define a clause"
+  },
+  "Goal Section": {
+    "prefix": "goal",
+    "body": [
+      "goal",
+      "    ${1:goalPredicate}.",
+      "$0"
+    ],
+    "description": "Define the goal"
+  },
+  "Class Declaration": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName}",
+      "predicates",
+      "    ${2:predicateName}(${3:arguments})",
+      "clauses",
+      "    ${2:predicateName}(${3:Args}) :-",
+      "        ${4:body}.",
+      "end class ${1:ClassName}",
+      "$0"
+    ],
+    "description": "Create a class"
+  },
+  "Interface Declaration": {
+    "prefix": "interface",
+    "body": [
+      "interface ${1:InterfaceName}",
+      "predicates",
+      "    ${2:predicateName}(${3:arguments})",
+      "end interface ${1:InterfaceName}",
+      "$0"
+    ],
+    "description": "Create an interface"
+  },
+  "Implement Section": {
+    "prefix": "implement",
+    "body": [
+      "implement ${1:ClassName}",
+      "clauses",
+      "    ${2:predicateName}(${3:Args}) :-",
+      "        ${4:body}.",
+      "end implement ${1:ClassName}",
+      "$0"
+    ],
+    "description": "Implement a class or interface"
+  },
+  "If-Then-Else": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition} then",
+      "    ${2:thenBody}",
+      "else",
+      "    ${3:elseBody}",
+      "end if",
+      "$0"
+    ],
+    "description": "If-then-else statement"
+  },
+  "Fact Declaration": {
+    "prefix": "fact",
+    "body": [
+      "facts",
+      "    ${1:factName}(${2:arguments})",
+      "$0"
+    ],
+    "description": "Declare a fact in database"
+  },
+  "Database Section": {
+    "prefix": "database",
+    "body": [
+      "database",
+      "    ${1:databaseName}",
+      "predicates",
+      "    ${2:predicateName}(${3:arguments})",
+      "$0"
+    ],
+    "description": "Create a database section"
+  },
+  "List Pattern": {
+    "prefix": "list",
+    "body": [
+      "[${1:Head}|${2:Tail}]$0"
+    ],
+    "description": "List pattern with head and tail"
+  },
+  "Write Statement": {
+    "prefix": "write",
+    "body": [
+      "write(${1:output})$0"
+    ],
+    "description": "Write output"
+  },
+  "Read Statement": {
+    "prefix": "read",
+    "body": [
+      "read(${1:variable})$0"
+    ],
+    "description": "Read input"
+  },
+  "Assert Clause": {
+    "prefix": "assert",
+    "body": [
+      "assert(${1:fact})$0"
+    ],
+    "description": "Assert a fact to database"
+  },
+  "Retract Clause": {
+    "prefix": "retract",
+    "body": [
+      "retract(${1:fact})$0"
+    ],
+    "description": "Retract a fact from database"
+  },
+  "Findall": {
+    "prefix": "findall",
+    "body": [
+      "findall(${1:Template}, ${2:Goal}, ${3:ResultList})$0"
+    ],
+    "description": "Find all solutions"
+  },
+  "Member Check": {
+    "prefix": "member",
+    "body": [
+      "member(${1:Element}, ${2:List})$0"
+    ],
+    "description": "Check list membership"
+  },
+  "Append Lists": {
+    "prefix": "append",
+    "body": [
+      "append(${1:List1}, ${2:List2}, ${3:Result})$0"
+    ],
+    "description": "Append two lists"
+  },
+  "Full Program Template": {
+    "prefix": "program",
+    "body": [
+      "% ${1:Program Name}",
+      "% ${2:Description}",
+      "",
+      "domains",
+      "    ${3:DomainName} = ${4:type}",
+      "",
+      "predicates",
+      "    ${5:predicateName}(${6:arguments})",
+      "",
+      "clauses",
+      "    ${5:predicateName}(${6:Args}) :-",
+      "        ${7:body}.",
+      "",
+      "goal",
+      "    ${5:predicateName}(${8:actualArgs}).",
+      "$0"
+    ],
+    "description": "Full Visual Prolog program template"
+  },
+  "Nondeterm Predicate": {
+    "prefix": "nondeterm",
+    "body": [
+      "predicates",
+      "    nondeterm ${1:predicateName}(${2:arguments})",
+      "$0"
+    ],
+    "description": "Non-deterministic predicate"
+  },
+  "Determ Predicate": {
+    "prefix": "determ",
+    "body": [
+      "predicates",
+      "    determ ${1:predicateName}(${2:arguments})",
+      "$0"
+    ],
+    "description": "Deterministic predicate"
+  },
+  "String Concatenation": {
+    "prefix": "concat",
+    "body": [
+      "concat(${1:String1}, ${2:String2}, ${3:Result})$0"
+    ],
+    "description": "Concatenate strings"
+  },
+  "File Open Read": {
+    "prefix": "openread",
+    "body": [
+      "openread(${1:FileName}, ${2:FileHandle})$0"
+    ],
+    "description": "Open file for reading"
+  },
+  "File Open Write": {
+    "prefix": "openwrite",
+    "body": [
+      "openwrite(${1:FileName}, ${2:FileHandle})$0"
+    ],
+    "description": "Open file for writing"
+  }
+}
