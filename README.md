@@ -412,7 +412,7 @@ MIT License - see LICENSE file for details
 
 - [Visual Prolog Official Website](http://www.visual-prolog.com/)
 - [Visual Prolog Documentation](http://wiki.visual-prolog.com/)
-- [Prolog Programming Tutorial](https://www.learnprolognow.org/)
+- [Repository](https://github.com/RatmirTech/visual-prolog-syntax/)
 
 ---
 
